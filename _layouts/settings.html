@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% if jekyll.environment == 'development' %}
+  {% assign baseUrl = '' %}
+{% else %}
+  {% assign baseUrl = site.github.url | default: 'site.url' %}
+  {% assign baseUrl = baseUrl | replace: 'http://', '//' %}
+{% endif %}
+
+<head>
+  {% include meta.html %}
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ baseUrl }}/css/main.css?v={{ site.version }}">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>window.BASE_URL = {{ baseUrl | jsonify }}</script>
+<script>window.PROFILES = {% include listAllProfiles %}</script>
+<script>window.TESTS = {% include listProfileTests profile=currentProfile %}</script>
+<script src="{{ baseUrl }}/profilesettings.js?v={{ site.version }}"></script>
+</html>

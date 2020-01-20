@@ -1,0 +1,17 @@
+{
+  "title" : "Speedtracker",
+  "repository" : "sd_speedtracker",
+  "colors": {
+    "--primary": "#dc1c24",
+    "--accent": "#0000FF",
+    "--bg-primary": "#F3F2F7",
+    "--bg-secondary": "#FFFFFF",
+    "--link": "#FF0000"
+  },
+  "chartColors": {
+    "--graph1": "red",
+    "--graph2": "yellow",
+    "--graph3": "green",
+    "--graph4": "blue"
+  }
+}

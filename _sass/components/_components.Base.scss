@@ -1,0 +1,102 @@
+select {
+  background: white;
+  border: 1px solid $border-color;
+
+  &:focus {
+    outline: 0;
+    border-color: $border-color--focus;
+  }
+}
+
+button {
+  outline: 0;
+  cursor: pointer;
+  border: unset;
+  border-radius: 22px;
+  background-color: white;
+
+
+  &:hover {
+    background-color: $button--hover;
+  }
+
+  &.button {
+    &--create, &--cancel {
+      height: 45px;
+    }
+
+    &--create {
+      color: white;
+      width: 100%;
+      background-color: rgba(var(--primary), 0.9);
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    &--cancel {
+      border: 2px solid black;
+      width: 100%;
+    }
+  }
+}
+
+input {
+  background: white;
+  border-width: 1px;
+  border: 1px solid $border-color;
+  padding: 10px;
+  border-radius: 3px;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $border-color--focus;
+  }
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + span {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    &:before {
+      border-color: grey;
+    }
+  }
+}
+
+input[type='checkbox']:checked + span:after {
+  content: "";
+  border: 1px solid black;
+  border-width: 0px 2px 2px 0px;
+  position: absolute;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: -15px;
+  margin-top: 1px;
+}
+
+input[type='checkbox'] + span:before {
+  content: "";
+  background: white;
+  border: 1px solid $border-color;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 1px;
+  border-radius: 3px;
+  left: -20px;
+  margin-top: 1px;
+}

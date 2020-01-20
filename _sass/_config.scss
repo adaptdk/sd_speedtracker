@@ -1,0 +1,19 @@
+$primary : rgb(var(--primary));
+$accent : rgb(var(--accent));
+$link : rgb(var(--link));
+$background : rgb(var(--bg-primary));
+$background-secondary : rgb(var(--bg-secondary));
+
+$gray: gray;
+$black: black;
+
+$border-color: rgb(220, 220, 220);
+$border-color--focus: #85b7d9;
+
+$button: rgb(228, 228, 228);
+$button--hover: rgb(238, 238, 238);
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}

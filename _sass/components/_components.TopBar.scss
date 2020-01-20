@@ -1,0 +1,34 @@
+.c-TopBar {
+  color: $primary;
+  text-align: left;
+  margin: auto;
+ 
+  &__inner {
+    max-width: 1600px;
+    margin: auto;
+    padding: 20px; 
+  }
+
+  .logo-text {
+    display: inline-block;
+    padding: 20px 15px 15px 10px;
+    border: 1px solid $primary;
+    margin-left: 5px;
+    height: 70px;
+    width: auto;
+    vertical-align: middle;
+
+    span {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+      line-height: 14px;
+
+      + span {
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+}
